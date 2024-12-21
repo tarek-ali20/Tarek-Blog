@@ -9,14 +9,14 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #ee9595;
     color: #333;
 }
 
 /* Header Styles */
 header {
     background-color: #333;
-    color: white;
+    color: rgb(79, 138, 131);
     padding: 20px 0;
     text-align: center;
 }
