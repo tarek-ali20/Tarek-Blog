@@ -1,72 +1,117 @@
-/* Apply a global font family and background color for the body */
+/* Global styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif; /* Custom font from Google Fonts */
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    line-height: 1.6; /* Line height for better readability */
 }
 
-/* Style for all headings (h1, h2) */
+/* Header styles */
 h1, h2 {
     color: #333;
     text-align: center;
 }
 
-/* Style for the main blog title */
+/* Main heading */
 h1 {
     font-size: 36px;
     margin-top: 20px;
 }
 
-/* Style for the section titles */
+/* Section titles */
 h2 {
     font-size: 28px;
     color: #444;
     margin-top: 10px;
 }
 
-/* Style for the article sections */
+/* Navigation Menu */
+nav {
+    display: flex;
+    justify-content: space-around; /* Spread the menu items evenly */
+    background-color: #333;
+    padding: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Flexbox layout for homepage and blog page */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Left column for the list of blog posts */
+.left-column {
+    flex: 1 1 250px; /* Flex-grow, flex-shrink, flex-basis */
+    margin-right: 20px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Right column for the blog post details */
+.right-column {
+    flex: 2 1 500px; /* Flex-grow, flex-shrink, flex-basis */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for individual blog post */
 article {
     background-color: #fff;
-    margin: 20px;
+    margin-bottom: 20px;
     padding: 15px;
-    border: 1px solid #ddd;
     border-radius: 8px;
-    box-sizing: border-box;  /* Ensures padding and borders are included in the width/height */
+    box-sizing: border-box;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Style for the paragraphs */
+article img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+}
+
+/* Paragraphs and list styling */
 p {
-    line-height: 1.6;
-    margin: 10px 0;
+    margin-bottom: 10px;
 }
 
-/* Style for lists inside the articles */
 ul {
-    margin: 10px 0;
+    margin-top: 10px;
+    margin-bottom: 20px;
     padding-left: 20px;
 }
 
-/* Style for links */
+/* Links inside articles */
 a {
     color: #0066cc;
     text-decoration: none;
 }
 
-/* Add hover effect for links */
 a:hover {
     text-decoration: underline;
 }
 
-/* Style for images */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 10px auto;
-}
-
-/* Style for the footer contact table */
+/* Table styles for contact information */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -83,17 +128,16 @@ th {
     background-color: #f1f1f1;
 }
 
-/* Style the form inputs */
+/* Contact form styles */
 input[type="text"], input[type="email"], textarea {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-sizing: border-box;  /* Ensures padding is included in the width */
+    box-sizing: border-box;
 }
 
-/* Style the form submit button */
 input[type="submit"] {
     background-color: #4CAF50;
     color: white;
@@ -105,4 +149,22 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #45a049;
+}
+
+/* Responsive design - stack columns vertically on smaller screens */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-column, .right-column {
+        width: 100%; /* Make both columns full width on small screens */
+        margin-right: 0;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
 }
