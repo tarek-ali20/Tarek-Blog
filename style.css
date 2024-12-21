@@ -1,0 +1,108 @@
+/* Apply a global font family and background color for the body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style for all headings (h1, h2) */
+h1, h2 {
+    color: #333;
+    text-align: center;
+}
+
+/* Style for the main blog title */
+h1 {
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+/* Style for the section titles */
+h2 {
+    font-size: 28px;
+    color: #444;
+    margin-top: 10px;
+}
+
+/* Style for the article sections */
+article {
+    background-color: #fff;
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;  /* Ensures padding and borders are included in the width/height */
+}
+
+/* Style for the paragraphs */
+p {
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+/* Style for lists inside the articles */
+ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+/* Style for links */
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+/* Add hover effect for links */
+a:hover {
+    text-decoration: underline;
+}
+
+/* Style for images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+/* Style for the footer contact table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #f1f1f1;
+}
+
+/* Style the form inputs */
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;  /* Ensures padding is included in the width */
+}
+
+/* Style the form submit button */
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
