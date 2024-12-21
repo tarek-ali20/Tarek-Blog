@@ -1,170 +1,239 @@
-/* Global styles */
-body {
-    font-family: 'Roboto', sans-serif; /* Custom font from Google Fonts */
-    background-color: #f4f4f4;
+/* Reset some default browser styles */
+* {
     margin: 0;
     padding: 0;
-    line-height: 1.6; /* Line height for better readability */
+    box-sizing: border-box;
 }
 
-/* Header styles */
-h1, h2 {
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
     color: #333;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
     text-align: center;
-}
-
-/* Main heading */
-h1 {
-    font-size: 36px;
-    margin-top: 20px;
-}
-
-/* Section titles */
-h2 {
-    font-size: 28px;
-    color: #444;
-    margin-top: 10px;
 }
 
 /* Navigation Menu */
 nav {
-    display: flex;
-    justify-content: space-around; /* Spread the menu items evenly */
     background-color: #333;
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
     padding: 10px;
 }
 
-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
+nav ul li a:hover {
+    color: #ff6600;
 }
 
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* Flexbox layout for homepage and blog page */
-.container {
+/* Main Content Section */
+.home-content {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: url('Images/home_background.jpg') no-repeat center center/cover; /* Background image */
+    color: white; /* Text color for contrast on background */
+}
+
+.home-content .image-section {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.home-content .image-section img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.home-content .text-section {
+    flex: 2;
+}
+
+.home-content .text-section h2 {
+    font-size: 2.5rem;
+    color: white; /* Ensuring visibility against dark background */
+    margin-bottom: 15px;
+}
+
+.home-content .text-section p {
+    font-size: 1.2rem;
+    color: #f9f9f9; /* Lighter color for readability */
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Blog Post Layout */
+.blog-layout {
+    display: flex;
     justify-content: space-between;
     padding: 20px;
 }
 
-/* Left column for the list of blog posts */
-.left-column {
-    flex: 1 1 250px; /* Flex-grow, flex-shrink, flex-basis */
-    margin-right: 20px;
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    box-sizing: border-box;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Right column for the blog post details */
-.right-column {
-    flex: 2 1 500px; /* Flex-grow, flex-shrink, flex-basis */
-    background-color: #fff;
+.post-list {
+    flex: 1;
     padding: 20px;
+    background-color: #f9f9f9;
     border-radius: 8px;
-    box-sizing: border-box;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Styling for individual blog post */
-article {
-    background-color: #fff;
-    margin-bottom: 20px;
-    padding: 15px;
-    border-radius: 8px;
-    box-sizing: border-box;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-article img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 10px 0;
-}
-
-/* Paragraphs and list styling */
-p {
+.post-list h2 {
+    font-size: 2rem;
     margin-bottom: 10px;
 }
 
-ul {
-    margin-top: 10px;
-    margin-bottom: 20px;
-    padding-left: 20px;
+.post-list ul {
+    list-style: none;
 }
 
-/* Links inside articles */
-a {
-    color: #0066cc;
+.post-list ul li {
+    margin-bottom: 10px;
+}
+
+.post-list ul li a {
     text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
 }
 
-a:hover {
-    text-decoration: underline;
+.post-list ul li a:hover {
+    color: #ff6600;
 }
 
-/* Table styles for contact information */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+.post-detail {
+    flex: 3;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
 }
 
-th, td {
-    padding: 10px;
-    border: 1px solid #ddd;
-    text-align: center;
+.post-detail h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #333;
 }
 
-th {
-    background-color: #f1f1f1;
+.post-detail h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
 }
 
-/* Contact form styles */
-input[type="text"], input[type="email"], textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
+.post-detail p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.8;
 }
 
-input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 15px;
-    border-radius: 5px;
-    cursor: pointer;
+/* Styling for responsiveness */
+@media (max-width: 1024px) {
+    .home-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-content .image-section {
+        margin-bottom: 20px;
+    }
+
+    .home-content .text-section h2 {
+        font-size: 2rem;
+    }
+
+    .home-content .text-section p {
+        font-size: 1rem;
+    }
 }
 
-input[type="submit"]:hover {
-    background-color: #45a049;
-}
-
-/* Responsive design - stack columns vertically on smaller screens */
 @media (max-width: 768px) {
-    .container {
+    /* Stack the layout vertically for smaller screens */
+    .blog-layout {
         flex-direction: column;
-        align-items: center;
+        padding: 10px;
     }
 
-    .left-column, .right-column {
-        width: 100%; /* Make both columns full width on small screens */
-        margin-right: 0;
+    .post-list {
+        margin-bottom: 20px;
     }
 
-    nav {
+    .post-detail {
+        padding: 15px;
+    }
+
+    /* Adjusting font sizes for better readability */
+    .post-list h2 {
+        font-size: 1.8rem;
+    }
+
+    .post-list ul li a {
+        font-size: 1rem;
+    }
+
+    .post-detail h1 {
+        font-size: 2rem;
+    }
+
+    .post-detail p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Mobile devices */
+    nav ul {
         flex-direction: column;
-        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .home-content .image-section img {
+        max-width: 100%;
+    }
+
+    .home-content .text-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .home-content .text-section p {
+        font-size: 1rem;
     }
 }
